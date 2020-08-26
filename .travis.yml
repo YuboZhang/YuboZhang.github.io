@@ -1,16 +1,32 @@
+os: linux
+
 language: node_js
 
-node_js: node
+node_js: stable
+
+branches:
+   only:
+     - master 
 
 cache:
-  npm: true
+   directories:
+     - node_modules
 
-install: npm install
+before_script:
+   - npm install -g hexo-cli
+   - git clone git@github.com:theme-next/hexo-theme-next.git theme/next
+   - npm install
+
+script:
+   - hexo generate
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
+   provider: pages
+   skip_cleanup: true
+   token: $GITHUB_TOKEN
+   keep_history: true
+   on:
+      branch: master
+   local_dir: public
+   target_branch: gh-pages
+

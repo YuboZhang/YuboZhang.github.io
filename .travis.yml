@@ -12,7 +12,7 @@ before_script:
   - git clone https://github.com/theme-next/hexo-theme-next.git themes/next
 
 script:
-  - hexo clean
+  - hexo version
   - hexo init 
 
 after_script:

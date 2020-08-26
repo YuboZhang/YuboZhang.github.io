@@ -1,32 +1,28 @@
-os: linux
-
 language: node_js
 
 node_js: stable
 
-branches:
-   only:
-     - master 
-
-cache:
-   directories:
-     - node_modules
+install:
+  - npm install
 
 before_script:
-   - npm install -g hexo-cli
-   - git clone https://github.com/theme-next/hexo-theme-next.git theme/next
-   - npm install
+  - mkdir pages
+  - cd pages
+  - git clone https://github.com/theme-next/hexo-theme-next.git themes/next
 
 script:
-   - hexo generate
+  - hexo clean
+  - hexo generate 
 
-deploy:
-   provider: pages
-   skip_cleanup: true
-   token: $GITHUB_TOKEN
-   keep_history: true
-   on:
-      branch: master
-   local_dir: public
-   target_branch: gh-pages
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "zhangyubo"
+  - git config user.email "cscrypto@163.com"
+  - git add .
+  - git commit -m "Deploy blog pages"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/YuboZhang/YuboZhang.github.io" origin gh-pages
 
+branches:
+  only:
+    - master

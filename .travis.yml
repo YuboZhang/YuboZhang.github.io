@@ -23,6 +23,7 @@ after_script:
   - git config user.email "cscrypto@163.com"
   - git add .
   - git commit -m "Deploy blog pages"
+  - echo $GITHUB_TOKEN
   - git push --force "https://${GITHUB_TOKEN}@github.com/YuboZhang/YuboZhang.github.io" master:gh-pages
 
 branches:

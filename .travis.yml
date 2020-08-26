@@ -12,7 +12,7 @@ before_script:
 
 script:
   - hexo clean
-  - hexo generate 
+  - hexo init 
 
 after_script:
   - cd ./public

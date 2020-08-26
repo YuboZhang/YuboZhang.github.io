@@ -9,14 +9,15 @@ install:
 before_script:
   - mkdir pages
   - cd pages
-  - git clone https://github.com/theme-next/hexo-theme-next.git themes/next
 
 script:
   - hexo version
   - hexo init 
+  - git submodule add https://github.com/theme-next/hexo-theme-next.git themes/next
+  - git submodule update --recursive --init
 
 after_script:
-  - git init
+  - git config --list
   - git config user.name "zhangyubo"
   - git config user.email "cscrypto@163.com"
   - git add .

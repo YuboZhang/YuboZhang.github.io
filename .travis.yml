@@ -15,20 +15,30 @@ cache:
 before_script:
    - npm install -g hexo-cli
    - git clone https://github.com/theme-next/hexo-theme-next.git theme/next
+   - cd theme/next
+   - git pull origin master
+   - cd ../..
    - npm install
 
 script:
    - hexo clean
    - hexo generate
 
-#after_script:
-#   - cd ./public
+# after_script:
+  # - cd ./public
+  # - git init
+  # - git config --list
+  # - git config user.name "zhangyubo"
+  # - git config user.email "cscrypto@163.com"
+  # - git add .
+  # - git commit -m "Deploy blog pages"
+  # - git push --quiet "https://${PAGES_SRC_TOKEN}@github.com/YuboZhang/YuboZhang.github.io" origin gh-pages
 
 deploy:
    provider: pages
    skip_cleanup: true
    strategy: git
-   token: $PAGES_SRC_TOKEN
+   token: $PAGES_SRC_TOKEN  #master
    keep_history: true
    on:
       branch: master

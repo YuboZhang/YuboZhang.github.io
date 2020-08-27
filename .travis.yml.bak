@@ -1,0 +1,37 @@
+os: linux
+
+language: node_js
+
+node_js: stable
+
+branches:
+   only:
+     - gh-pages 
+
+cache:
+   directories:
+     - node_modules
+
+before_script:
+   - npm install -g hexo-cli
+   - git clone https://github.com/theme-next/hexo-theme-next.git theme/next
+   - npm install
+
+script:
+   - hexo clean
+   - hexo generate
+
+#after_script:
+#   - cd ./public
+
+deploy:
+   provider: pages
+   skip_cleanup: true
+   strategy: git
+   token: $GITHUB_TOKEN
+   keep_history: true
+   on:
+      branch: gh-pages
+   local_dir: public
+   target_branch: master
+

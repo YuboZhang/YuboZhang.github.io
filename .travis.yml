@@ -34,4 +34,6 @@ deploy:
       branch: gh-pages
    local_dir: public
    target_branch: master
+   email: cscrypto@163.com
+   name: zhangyubo
 

@@ -6,7 +6,7 @@ node_js: stable
 
 branches:
    only:
-     - gh-pages 
+     - master 
 
 cache:
    directories:
@@ -28,12 +28,12 @@ deploy:
    provider: pages
    skip_cleanup: true
    strategy: git
-   token: $GITHUB_TOKEN
+   token: $PAGES_SRC_TOKEN
    keep_history: true
    on:
-      branch: gh-pages
+      branch: master
    local_dir: public
-   target_branch: master
+   target_branch: gh-pages
    email: cscrypto@163.com
    name: zhangyubo
 

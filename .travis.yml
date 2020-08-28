@@ -14,10 +14,7 @@ cache:
 
 before_script:
    - npm install -g hexo-cli
-   - git clone https://github.com/theme-next/hexo-theme-next.git theme/next
-   - cd theme/next
-   - git pull origin master
-   - cd ../..
+   - git submodule update --recursive --init
    - npm install
 
 script:

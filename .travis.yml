@@ -15,7 +15,6 @@ cache:
 before_script:
    - npm install -g hexo-cli
    - npm install hexo-symbols-count-time --save
-   - git clone https://github.com/YuboZhang/hexo-theme-next.git themes/next
    - npm install
 
 script:

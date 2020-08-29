@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo Home Page 
-subtitle: ''
+title: Zhang Yubo | Personal Page
+subtitle: 'memos'
 description: ''
 keywords:
 author: Zhang Yubo
@@ -33,7 +33,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :title-:year:month:day.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:

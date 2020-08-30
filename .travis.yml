@@ -15,9 +15,10 @@ cache:
 before_script:
    - npm install -g hexo-cli
    - npm install hexo-symbols-count-time --save
-   - npm install hexo-math --save
+   #- npm install hexo-math --save
    - npm uninstall hexo-renderer-marked --save
-   - npm install hexo-renderer-markdown-it-plus --save
+   #- npm install hexo-renderer-markdown-it-plus --save  # for katex
+   - npm install hexo-renderer-pandoc --save # for mathjax
    - npm install
 
 script:

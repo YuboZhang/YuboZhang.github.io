@@ -6,7 +6,7 @@ node_js: stable
 
 branches:
    only:
-     - master 
+     - master
 
 cache:
    directories:
@@ -15,6 +15,7 @@ cache:
 before_script:
    - npm install -g hexo-cli
    - npm install hexo-symbols-count-time --save
+   - npm install hexo-math --save
    - npm install
 
 script:
@@ -43,4 +44,3 @@ deploy:
    target_branch: gh-pages
    email: cscrypto@163.com
    name: zhangyubo
-

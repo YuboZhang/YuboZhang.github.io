@@ -11,7 +11,7 @@ mathjax: true
 
 # Mathjax example
 
-## Simple
+## Simple equation
 
 $a_1 + b_2 = c_3$
 
@@ -19,7 +19,7 @@ $$
 a_x^2 + b_y^3 = c_z
 $$
 
-## With number
+## Equation with number
 
 $$\begin{equation}\label{eq1}
 e=mc^2

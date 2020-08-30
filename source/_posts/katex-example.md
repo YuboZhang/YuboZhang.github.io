@@ -10,7 +10,7 @@ katex: true
 ---
 
 ## Katex example
-$ a_1 + b_2 = c_3 $
+$a_1 + b_2 = c_3$
 
 $$
 a_x^2 + b_y^3 = c_z

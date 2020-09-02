@@ -5,7 +5,7 @@ updated: 2020-09-02 23:31:26
 categories:
 	- [Rust]
 tags:
-	- Zero Knowledge
+	- Zero Knowledge Proof
   - Rust
   - Bulletproofs
 mathjax: false

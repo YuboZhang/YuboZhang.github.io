@@ -1,18 +1,20 @@
 ---
-title: Error on using Bulletproofs
+title: Error on building Bulletproofs
 date: 2020-09-02 23:31:23
-updated: 2020-09-02 23:31:26
+updated: 2020-09-02 23:31:23
 categories:
-	- [Rust]
+  - [Rust]
 tags:
-	- Zero Knowledge Proof
+  - Zero Knowledge Proof
   - Rust
   - Bulletproofs
 mathjax: false
 ---
-# Clone code from github.
-Address is [Github repo](https://github.com/ZenGo-X/bulletproofs.git)
-
+# Download the code.
+Clone code from [GitHub](https://github.com/ZenGo-X/bulletproofs.git).
+```bash
+git clone https://github.com/ZenGo-X/bulletproofs.git
+```
 # Build follow the README.md
 
 # Error found as below.

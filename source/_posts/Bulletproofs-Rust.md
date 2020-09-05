@@ -1,7 +1,7 @@
 ---
 title: Error on building Bulletproofs
 date: 2020-09-02 23:31:23
-updated: 2020-09-02 23:31:23
+updated: 2020-09-05 12:08:26
 categories:
   - [Rust]
 tags:
@@ -274,4 +274,19 @@ Everything works now.
     running 0 tests
 
     test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+```
+
+# Opensource Resources (Github repos)
+ZenGo-X bulletproofs
+``` console
+https://github.com/ZenGo-X/bulletproofs.git
+```
+dalek-cryptography bulletproofs (only works on branch develop, verified on 2020-09-05 12:06:00)
+``` console
+https://github.com/dalek-cryptography/bulletproofs.git
+```
+
+OSCCA SM2/3/4 implementation in Rust
+``` console
+https://github.com/citahub/libsm.git
 ```

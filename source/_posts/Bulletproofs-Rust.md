@@ -277,16 +277,16 @@ Everything works now.
 ```
 
 # Opensource Resources (Github repos)
-ZenGo-X bulletproofs
+- ZenGo-X bulletproofs
 ``` console
 https://github.com/ZenGo-X/bulletproofs.git
 ```
-dalek-cryptography bulletproofs (only works on branch develop, verified on 2020-09-05 12:06:00)
+- dalek-cryptography bulletproofs (only works on branch develop, verified on 2020-09-05 12:06:00)
 ``` console
 https://github.com/dalek-cryptography/bulletproofs.git
 ```
 
-OSCCA SM2/3/4 implementation in Rust
+- OSCCA SM2/3/4 implementation in Rust
 ``` console
 https://github.com/citahub/libsm.git
 ```

@@ -22,4 +22,4 @@ To run Rust programs in Cortex M core. Guide could be found [here](https://rust-
 cargo install cargo-binutils
 rustup component add llvm-tools-preview  #lack of this tools will result in Failed to execute tool: readobj
 ```
-Dependencies could be find [here](https://docs.rust-embedded.org/discovery/03-setup/index.html).
+Dependencies could be found [here](https://docs.rust-embedded.org/discovery/03-setup/index.html).

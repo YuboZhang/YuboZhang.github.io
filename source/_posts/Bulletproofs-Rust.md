@@ -1,7 +1,7 @@
 ---
 title: Error on building Bulletproofs
 date: 2020-09-02 23:31:23
-updated: 2020-09-05 12:08:26
+updated: 2020-09-06 22:50:53
 categories:
   - [Rust]
 tags:
@@ -276,7 +276,7 @@ Everything works now.
     test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-# Opensource Resources (Github repos)
+# Opensource Resources (repos and docs)
 - ZenGo-X bulletproofs
 ``` console
 https://github.com/ZenGo-X/bulletproofs.git
@@ -290,3 +290,11 @@ https://github.com/dalek-cryptography/bulletproofs.git
 ``` console
 https://github.com/citahub/libsm.git
 ```
+
+- Documents
+-- [Getting start with QEMU](https://rust-embedded.github.io/book/start/qemu.html)
+-- [the embedded Rust book](https://rust-embedded.github.io/book/)
+-- [RFC-1184](https://github.com/rust-lang/rfcs/blob/master/text/1184-stabilize-no_std.md)
+-- [embedonomicon](https://docs.rust-embedded.org/embedonomicon/smallest-no-std.html)
+-- [More about the language items](https://doc.rust-lang.org/unstable-book/language-features/lang-items.html#more-about-the-language-items)
+-- [How to use compiled rust library file(.rlib file)](https://users.rust-lang.org/t/how-to-use-compiled-rust-library-file-rlib-file/17484)

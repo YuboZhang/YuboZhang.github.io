@@ -277,24 +277,24 @@ Everything works now.
 ```
 
 # Opensource Resources (repos and docs)
-- ZenGo-X bulletproofs
+## ZenGo-X bulletproofs
 ``` console
 https://github.com/ZenGo-X/bulletproofs.git
 ```
-- dalek-cryptography bulletproofs (only works on branch develop, verified on 2020-09-05 12:06:00)
+## dalek-cryptography bulletproofs (only works on branch develop, verified on 2020-09-05 12:06:00)
 ``` console
 https://github.com/dalek-cryptography/bulletproofs.git
 ```
 
-- OSCCA SM2/3/4 implementation in Rust
+## OSCCA SM2/3/4 implementation in Rust
 ``` console
 https://github.com/citahub/libsm.git
 ```
 
-- Documents
--- [Getting start with QEMU](https://rust-embedded.github.io/book/start/qemu.html)
--- [the embedded Rust book](https://rust-embedded.github.io/book/)
--- [RFC-1184](https://github.com/rust-lang/rfcs/blob/master/text/1184-stabilize-no_std.md)
--- [embedonomicon](https://docs.rust-embedded.org/embedonomicon/smallest-no-std.html)
--- [More about the language items](https://doc.rust-lang.org/unstable-book/language-features/lang-items.html#more-about-the-language-items)
--- [How to use compiled rust library file(.rlib file)](https://users.rust-lang.org/t/how-to-use-compiled-rust-library-file-rlib-file/17484)
+## Documents
+- [Getting start with QEMU](https://rust-embedded.github.io/book/start/qemu.html)
+- [the embedded Rust book](https://rust-embedded.github.io/book/)
+- [RFC-1184](https://github.com/rust-lang/rfcs/blob/master/text/1184-stabilize-no_std.md)
+- [embedonomicon](https://docs.rust-embedded.org/embedonomicon/smallest-no-std.html)
+- [More about the language items](https://doc.rust-lang.org/unstable-book/language-features/lang-items.html#more-about-the-language-items)
+- [How to use compiled rust library file(.rlib file)](https://users.rust-lang.org/t/how-to-use-compiled-rust-library-file-rlib-file/17484)

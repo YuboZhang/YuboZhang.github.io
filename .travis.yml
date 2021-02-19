@@ -40,7 +40,7 @@ script:
 
 deploy:
    provider: pages
-   cleanup: true
+   skip_cleanup: true
    strategy: git
    token: $PAGES_SRC_TOKEN  #master
    keep_history: true

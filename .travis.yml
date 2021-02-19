@@ -25,6 +25,7 @@ before_script:
    - npm update
 
 script:
+   - hexo version
    - hexo clean
    - hexo generate
 

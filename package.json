@@ -22,7 +22,4 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0"
   },
-  "engines": {
-    "node": "17.9.0"
-  },
 }

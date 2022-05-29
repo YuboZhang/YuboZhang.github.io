@@ -23,6 +23,6 @@
     "hexo-server": "^2.0.0"
   },
   "engines": {
-    "node": "= 17.9.x"
+    "node": "17.9.0"
   },
 }

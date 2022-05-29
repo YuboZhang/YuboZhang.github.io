@@ -1,5 +1,5 @@
 ---
-title: sbt encoding issue: Chinese words are not printed as expected
+title: [sbt encoding issue] Chinese words are not printed as expected
 date: 2022-05-02 21:33:26
 updated: 2022-05-02 21:33:26
 categories:

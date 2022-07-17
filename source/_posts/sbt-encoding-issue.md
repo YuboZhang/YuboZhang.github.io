@@ -45,6 +45,7 @@ Active code page: 65001
 
 # Permanent Solution
 Change System Locale to Use UTF-8 Encoding in Windows PowerShell.
+
 - Go to Region Settings from the Control Panel.
 - Open the Administrative tab and click Change system locale.
 - Then check the Beta option as shown in the image below.

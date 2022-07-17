@@ -1,7 +1,7 @@
 ---
 title: sbt encoding issue - Chinese words are not printed as expected
 date: 2022-05-02 21:33:26
-updated: 2022-05-02 21:33:26
+updated: 2022-07-17 14:17:47
 categories:
   - [Scala]
   - [Chisel]
@@ -35,13 +35,23 @@ PS E:\Workspaces\scala\chisel_helloworld> sbt 'testOnly gcd.GcdDecoupledTester'
 [success] Total time: 15 s, completed 2022骞?鏈?鏃ヤ笅鍗?:56:52
 ```
 
-# Solution
+# Ephemeral Solution
 Run the following commands.
 ```bash
 PS E:\Workspaces\scala\chisel_helloworld> set JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 PS E:\Workspaces\scala\chisel_helloworld> chcp 65001
 Active code page: 65001
 ```
+
+# Permanent Solution
+Change System Locale to Use UTF-8 Encoding in Windows PowerShell.
+- Go to Region Settings from the Control Panel.
+- Open the Administrative tab and click Change system locale.
+- Then check the Beta option as shown in the image below.![](/images/region.png)
+
+
+For more details please refer to [UTF-8 Encoding (CHCP 65001) in PowerShell](https://www.delftstack.com/howto/powershell/powershell-utf-8-encoding-chcp-65001/).
+
 
 # Done
 Everything works fine now.

@@ -28,5 +28,7 @@ Android生物识别身份认证流程
 
 More info:
 - [在Android中使用生物识别](https://segmentfault.com/a/1190000040140033)
+
 - [实战 | 将 Android 生物识别身份验证整合至应用中](https://segmentfault.com/a/1190000040175152)
+
 - [Example on Github](https://github.com/isaidamier/blogs.biometrics.cryptoBlog)

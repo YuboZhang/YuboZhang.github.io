@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v3
         with: 
           node-version: 17.9.0
-          cache: npm
+          #cache: npm
       - run: npm install -g hexo-cli
       - run: npm install hexo-symbols-count-time --save
       - run: npm install hexo-math --save

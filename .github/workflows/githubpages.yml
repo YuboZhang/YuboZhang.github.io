@@ -26,8 +26,8 @@ jobs:
       - run: hexo version
       - run: hexo clean
       - run: hexo generate
-      - name: Check out repository code
-      - run: git config user.name "zhangyubo"
+      - name: push to repository
+        run: git config user.name "zhangyubo"
              git config user.email "cscrypto@163.com"
              git add .
              git commit -m "Deploy blog pages"

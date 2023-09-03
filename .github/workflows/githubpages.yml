@@ -8,7 +8,7 @@ on:
 jobs:
   deploy_github_pages:
     needs: build
-    permission: 
+    permissions: 
       pages: write
       id-token: write
     environment:

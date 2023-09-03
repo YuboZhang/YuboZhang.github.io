@@ -12,8 +12,8 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v3
         with: 
-          node-version: 17.9.0
-          # cache: npm
+          node-version: 17.9.0 # cache: npm
+          
       - name: install hexo
         run: npm install -g hexo-cli
              npm install hexo-symbols-count-time --save

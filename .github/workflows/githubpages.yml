@@ -31,8 +31,10 @@ jobs:
         run:  gh repo clone YuboZhang/YuboZhang.github.io
       - name: run hexo
         run: |
+             cd YuboZhang.github.io
              hexo version
              hexo clean
+             hexo init
              hexo generate
       - name: push to repository
         run: |

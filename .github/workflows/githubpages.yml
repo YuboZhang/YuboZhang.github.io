@@ -28,7 +28,9 @@ jobs:
       - name: pull git repository
         env:
             GH_TOKEN: ${{ github.token }}
-        run:  gh repo clone YuboZhang/YuboZhang.github.io
+        run:  |
+             gh repo clone YuboZhang/YuboZhang.github.io
+             ls -l ${{ github.workspace }}/YuboZhang.github.io
       - name: run hexo
         run: |
              cd YuboZhang.github.io
@@ -38,8 +40,6 @@ jobs:
              hexo generate
       - name: push to repository
         run: |
-             ls -l ${{ github.workspace }}/YuboZhang.github.io
-             ls -l ${{ github.workspace }}/../../
              git config --global user.name "zhangyubo"
              git config --global user.email "cscrypto@163.com"
              git add .

@@ -7,20 +7,24 @@ on:
 
 jobs:
   deploy_github_pages:
+    needs: build
+    permission: 
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
       - name: setup node
         uses: actions/setup-node@v3
         with: 
           node-version: '20.x'
           #cache: npm
-      - name: pull git repository
-        env:
-            GH_TOKEN: ${{ github.token }}
-        run:  |
-             gh repo clone YuboZhang/YuboZhang.github.io
-             ls -l ${{ github.workspace }}/YuboZhang.github.io
-             cd ${{ github.workspace }}/YuboZhang.github.io
+      
       - name: install hexo
         run: |
              npm install -g hexo-cli
@@ -37,7 +41,14 @@ jobs:
              hexo version
              hexo clean
              hexo init
-             hexo generate
+      - name: pull git repository
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run:  |
+             gh repo clone YuboZhang/YuboZhang.github.io
+             ls -l ${{ github.workspace }}/YuboZhang.github.io
+             cd ${{ github.workspace }}/YuboZhang.github.io
+             # hexo generate
       - name: push to repository
         run: |
              git config --global user.name "zhangyubo"

@@ -100,6 +100,9 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+#scheme: Muse
+#scheme: Mist
+scheme: Pisces
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  deploy github pages:
+  deploy_github_pages:
     runs-on: ubuntu-latest
     steps:
       - name: setup node

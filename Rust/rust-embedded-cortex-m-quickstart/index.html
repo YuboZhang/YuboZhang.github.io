@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"yubozhang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Introduction To run Rust programs in Cortex M core. Guide could be found here. Git repos  cortex-m-quickstart  Dependencies 12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack">
+  <meta name="description" content="IntroductionTo run Rust programs in Cortex M core. Guide could be found here. Git repos cortex-m-quickstart  Dependencies12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rust-embedded Cortex-M-Quickstart">
 <meta property="og:url" content="https://yubozhang.github.io/Rust/rust-embedded-cortex-m-quickstart/index.html">
-<meta property="og:site_name" content="Zhang Yubo   Personal Page">
-<meta property="og:description" content="Introduction To run Rust programs in Cortex M core. Guide could be found here. Git repos  cortex-m-quickstart  Dependencies 12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack">
+<meta property="og:site_name" content="Personal Page">
+<meta property="og:description" content="IntroductionTo run Rust programs in Cortex M core. Guide could be found here. Git repos cortex-m-quickstart  Dependencies12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack of">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-03T11:35:45.000Z">
 <meta property="article:modified_time" content="2020-09-03T11:35:45.000Z">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Rust-embedded Cortex-M-Quickstart | Zhang Yubo   Personal Page</title>
+  <title>Rust-embedded Cortex-M-Quickstart | Personal Page</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175630298-1"></script>
     <script>
@@ -88,11 +88,7 @@
   </style>
 </noscript>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -112,7 +108,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Zhang Yubo   Personal Page</h1>
+      <h1 class="site-title">Personal Page</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">Stay Hungry, Stay Foolish</p>
@@ -198,7 +194,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhang Yubo   Personal Page">
+      <meta itemprop="name" content="Personal Page">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -231,20 +227,6 @@
               </span>
               <span class="post-meta-item-text">Views: </span>
               <span id="busuanzi_value_page_pv"></span>
-            </span><br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>252</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
             </span>
 
         </div>
@@ -256,14 +238,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="introduction">Introduction</h2>
-<p>To run Rust programs in Cortex M core. Guide could be found <a target="_blank" rel="noopener" href="https://rust-embedded.github.io/book/intro/index.html">here</a>.</p>
-<h2 id="git-repos">Git repos</h2>
-<ul>
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>To run Rust programs in Cortex M core. Guide could be found <a target="_blank" rel="noopener" href="https://rust-embedded.github.io/book/intro/index.html">here</a>.</p>
+<h2 id="Git-repos"><a href="#Git-repos" class="headerlink" title="Git repos"></a>Git repos</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/rust-embedded/cortex-m-quickstart.git">cortex-m-quickstart</a></li>
 </ul>
-<h2 id="dependencies">Dependencies</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cargo install cargo-binutils</span><br><span class="line">rustup component add llvm-tools-preview  <span class="comment">#lack of this tools will result in Failed to execute tool: readobj</span></span><br></pre></td></tr></table></figure>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cargo install cargo-binutils</span><br><span class="line">rustup component add llvm-tools-preview  <span class="comment">#lack of this tools will result in Failed to execute tool: readobj</span></span><br></pre></td></tr></table></figure>
 <p>Dependencies could be found <a target="_blank" rel="noopener" href="https://docs.rust-embedded.org/discovery/03-setup/index.html">here</a>.</p>
 
     </div>
@@ -351,7 +330,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-repos"><span class="nav-number">2.</span> <span class="nav-text">Git repos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dependencies"><span class="nav-number">3.</span> <span class="nav-text">Dependencies</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-repos"><span class="nav-number">2.</span> <span class="nav-text">Git repos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dependencies"><span class="nav-number">3.</span> <span class="nav-text">Dependencies</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -405,23 +384,11 @@
 <div class="copyright">
   
   &copy; 2020 – 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhang Yubo</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-area"></i>
-    </span>
-      <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">30k</span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">28 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>

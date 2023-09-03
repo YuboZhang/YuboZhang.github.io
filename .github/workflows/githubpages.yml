@@ -32,7 +32,7 @@ jobs:
       - name: run hexo
         run: |
              cd YuboZhang.github.io
-             hexo version
+             ../hexo version
              hexo clean
              hexo init
              hexo generate

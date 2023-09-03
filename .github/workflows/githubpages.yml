@@ -25,6 +25,8 @@ jobs:
              npm install hexo-renderer-pandoc --save # for mathjax
              npm install
              npm update
+      - env:
+          GH_TOKEN: ${{ github.token }}
       - name: pull git repository
         run:  gh repo clone YuboZhang/YuboZhang.github.io
       - name: run hexo

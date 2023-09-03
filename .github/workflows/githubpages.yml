@@ -37,11 +37,6 @@ jobs:
              npm install hexo-renderer-pandoc --save # for mathjax
              npm install
              npm update
-      - name: run hexo
-        run: |
-             hexo version
-             hexo clean
-             hexo init
       - name: pull git repository
         env:
             GH_TOKEN: ${{ github.token }}
@@ -49,7 +44,11 @@ jobs:
              gh repo clone YuboZhang/YuboZhang.github.io
              ls -l ${{ github.workspace }}/YuboZhang.github.io
              cd ${{ github.workspace }}/YuboZhang.github.io
-             # hexo generate
+      - name: run hexo
+        run: |
+             hexo version
+             hexo clean
+             hexo generate
       - name: push to repository
         run: |
              git config --global user.name "zhangyubo"

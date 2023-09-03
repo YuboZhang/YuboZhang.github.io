@@ -37,7 +37,7 @@ jobs:
       - name: push to repository
         run: |
              ls -l ${{ github.workspace }}/YuboZhang.github.io
-             ls -l ${{ github.workspace }}/../
+             ls -l ${{ github.workspace }}/../../
              git config --global user.name "zhangyubo"
              git config --global user.email "cscrypto@163.com"
              git add .

@@ -6,9 +6,9 @@ on:
       - master
 
 jobs:
-  build:
+  #build:
   deploy_github_pages:
-    needs: build
+    #needs: build
     permissions: 
       pages: write
       id-token: write

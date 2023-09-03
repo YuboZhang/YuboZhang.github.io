@@ -6,6 +6,7 @@ on:
       - master
 
 jobs:
+  build:
   deploy_github_pages:
     needs: build
     permissions: 
@@ -13,10 +14,46 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      #url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+      #- name: Deploy to GitHub Pages
+      #  id: deployment
+      #  uses: actions/deploy-pages@v2
+      - name: setup node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: '20.x'
+          #cache: npm
       
+      - name: install hexo
+        run: |
+             npm install -g hexo-cli
+             npm install hexo-symbols-count-time --save
+             npm install hexo-math --save
+             npm uninstall hexo-renderer-marked --save
+             wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
+             sudo dpkg -i pandoc-2.10.1-1-amd64.deb  # install pandoc before hexo-renderer-pandoc
+             npm install hexo-renderer-pandoc --save # for mathjax
+             npm install
+             npm update
+      - name: run hexo
+        run: |
+             hexo version
+             hexo clean
+             hexo init
+      - name: pull git repository
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run:  |
+             gh repo clone YuboZhang/YuboZhang.github.io
+             ls -l ${{ github.workspace }}/YuboZhang.github.io
+             cd ${{ github.workspace }}/YuboZhang.github.io
+             # hexo generate
+      - name: push to repository
+        run: |
+             git config --global user.name "zhangyubo"
+             git config --global user.email "cscrypto@163.com"
+             git add .
+             git commit -m "Deploy blog pages"
+             git push origin gh-pages

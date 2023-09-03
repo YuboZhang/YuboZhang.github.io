@@ -14,6 +14,13 @@ jobs:
         with: 
           node-version: '20.x'
           #cache: npm
+      - name: pull git repository
+        env:
+            GH_TOKEN: ${{ github.token }}
+        run:  |
+             gh repo clone YuboZhang/YuboZhang.github.io
+             ls -l ${{ github.workspace }}/YuboZhang.github.io
+             cd ${{ github.workspace }}/YuboZhang.github.io
       - name: install hexo
         run: |
              npm install -g hexo-cli
@@ -25,16 +32,9 @@ jobs:
              npm install hexo-renderer-pandoc --save # for mathjax
              npm install
              npm update
-      - name: pull git repository
-        env:
-            GH_TOKEN: ${{ github.token }}
-        run:  |
-             gh repo clone YuboZhang/YuboZhang.github.io
-             ls -l ${{ github.workspace }}/YuboZhang.github.io
       - name: run hexo
         run: |
-             cd YuboZhang.github.io
-             ../hexo version
+             hexo version
              hexo clean
              hexo init
              hexo generate

@@ -1,7 +1,7 @@
 ---
 title: Android Biometric
 date: 2022-08-07 20:31:30
-updated: 2023-09-10 22:26:31
+updated: 2023-09-10 22:33:01
 categories:
 	- [Android]
 tags:
@@ -15,8 +15,10 @@ tags:
 ### Authentication
 
 Android生物识别身份[认证](https://source.android.com/security/authentication?hl=zh-cn)流程
-![身份验证流程](/images/authentication-flow.png)
-![Data Flow For Fingerprint Authentication](/images/DataFlowForFingerprintAuthentication.png)
+![身份验证流程](/images/authentication-flow.png "身份验证流程")
+
+Data Flow For Fingerprint Authentication
+![Data Flow For Fingerprint Authentication](/images/DataFlowForFingerprintAuthentication.png "Data Flow For Fingerprint Authentication")
 
 ### Keymaster
 Keymaster implements the Android key store in TEE to guard cryptographic key storage and use in the case of a run-time kernel compromise [Keystore](https://source.android.com/docs/security/keystore?hl=zh-cn). That is, even with a fully compromised kernel, an attacker cannot read key material stored in Keymaster16. Apps can explicitly request keys to be stored in Keymaster, i.e. to be hardware-bound, to be only accessible after user authentication (which is tied to Gatekeeper/Weaver), and/or request attestation certificates to verify these key properties [android.security.keystore.KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec), allowing verification of compatibility in terms of rule ○3 (compatibility).

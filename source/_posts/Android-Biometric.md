@@ -12,7 +12,7 @@ Android生物识别身份认证流程
 ## Android Biometric Cryptography
 
 ### Authentication
-
+![身份验证流程](/images/authentication-flow.png)
 [Authentication](https://source.android.com/security/authentication?hl=zh-cn)
 
 

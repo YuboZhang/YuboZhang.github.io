@@ -208,7 +208,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-10 10:27:45" itemprop="dateModified" datetime="2023-09-10T10:27:45+08:00">2023-09-10</time>
+                <time title="Modified: 2023-09-10 11:25:56" itemprop="dateModified" datetime="2023-09-10T11:25:56+08:00">2023-09-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,8 +233,12 @@
       
           <p>Android生物识别身份认证流程<br><img src="/images/authentication-flow.png" alt="身份验证流程"></p>
 <h2 id="Android-Biometric-Cryptography"><a href="#Android-Biometric-Cryptography" class="headerlink" title="Android Biometric Cryptography"></a>Android Biometric Cryptography</h2><h3 id="Authentication"><a href="#Authentication" class="headerlink" title="Authentication"></a>Authentication</h3><p><a target="_blank" rel="noopener" href="https://source.android.com/security/authentication?hl=zh-cn">Authentication</a></p>
-<h3 id="Keystore-StrongBox"><a href="#Keystore-StrongBox" class="headerlink" title="Keystore(StrongBox)"></a>Keystore(StrongBox)</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/training/articles/keystore.html?hl=zh-cn">Keystore</a></p>
-<h3 id="Gatekeeper"><a href="#Gatekeeper" class="headerlink" title="Gatekeeper"></a>Gatekeeper</h3><p><a target="_blank" rel="noopener" href="https://source.android.com/security/authentication/gatekeeper?hl=zh-cn">Gatekeeper</a></p>
+<h3 id="Keymaster"><a href="#Keymaster" class="headerlink" title="Keymaster"></a>Keymaster</h3><p>Keymaster implements the Android key store in TEE to guard cryptographic key storage and use in the case of a run-time kernel compromise <a target="_blank" rel="noopener" href="https://source.android.com/docs/security/keystore?hl=zh-cn">Keystore</a>. That is, even with a fully compromised kernel, an attacker cannot read key material stored in Keymaster16. Apps can explicitly request keys to be stored in Keymaster, i.e. to be hardware-bound, to be only accessible after user authentication (which is tied to Gatekeeper&#x2F;Weaver), and&#x2F;or request attestation certificates to verify these key properties <a target="_blank" rel="noopener" href="https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec">android.security.keystore.KeyGenParameterSpec</a>, allowing verification of compatibility in terms of rule ○3 (compatibility).<br><img src="/images/access-to-keymaster.png" alt="访问 Keymaster"></p>
+<h3 id="StrongBox"><a href="#StrongBox" class="headerlink" title="StrongBox"></a>StrongBox</h3><p>Strongbox, specified starting with Android 9.0, implements the Android <a target="_blank" rel="noopener" href="https://developer.android.com/training/articles/keystore.html?hl=zh-cn">keystore</a> in separate tamper resistant hardware (TRH) for even better isolation. This mitigates [T.P2] and [T.P3] against strong adversaries, e.g. against cold boot memory  attacks [83] or hardware bugs such as Spectre&#x2F;Meltdown [95, 104], Rowhammer [57, 136], or Clkscrew [129] that allow  privilege escalation even from kernel to TEE. From a hardware perspective, the main application processor (AP) will always have a significantly larger attack surface than dedicated secure co-processor. Adding a separate TRH affords another  sandboxing layer of defense in depth. The Google Pixel 3 was the first device to support Strongbox with a dedicated TRH (Titan M [146]), and other OEM devices have since started to implement it (often using standard secure elements that have been available on Android devices for NFC payment and other use cases).</p>
+<blockquote>
+<p><strong><em>NOTE:</em></strong><br>Note that only storing and using keys in TEE or TRH does not completely solve the problem of making them unusable under the assumption of a kernel compromise: if an attacker gains access to the low-level interfaces for communicating directly with<br>Keymaster or Strongbox, they can use it as an oracle for cryptographic operations that require the private key. This is the reason why keys can be authentication bound and&#x2F;or require user presence verification, e.g. by pushing a hardware button that is detectable by the TRH to assure that keys are not used in the background without user consent.</p>
+</blockquote>
+<h3 id="Gatekeeper"><a href="#Gatekeeper" class="headerlink" title="Gatekeeper"></a>Gatekeeper</h3><p><a target="_blank" rel="noopener" href="https://source.android.com/security/authentication/gatekeeper?hl=zh-cn">Gatekeeper</a> implements verification of user lock screen factors (PIN&#x2F;password&#x2F;pattern) in TEE and, upon successful authentication, communicates this to Keymaster for releasing access to authentication bound keys. Weaver implements the same functionality in TRH and communicates with Strongbox.</p>
 <p>More info:</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040140033">在Android中使用生物识别</a></p>
@@ -242,6 +246,8 @@
 <li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040175152">实战 | 将 Android 生物识别身份验证整合至应用中</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://github.com/isaidamier/blogs.biometrics.cryptoBlog">Example on Github</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1904.05572.pdf">The Android Platform Security Model</a></p>
 </li>
 </ul>
 

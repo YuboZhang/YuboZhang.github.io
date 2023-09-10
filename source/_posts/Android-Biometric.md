@@ -1,20 +1,20 @@
 ---
 title: Android Biometric
 date: 2022-08-07 20:31:30
-updated: 2022-08-07 20:31:30
+updated: 2023-09-10 10:27:45
 categories:
 	- [Android]
 tags:
 	- Biometric
 ---
 Android生物识别身份认证流程
+![身份验证流程](/images/authentication-flow.png)
 
 ## Android Biometric Cryptography
 
 ### Authentication
-![身份验证流程](/images/authentication-flow.png)
-[Authentication](https://source.android.com/security/authentication?hl=zh-cn)
 
+[Authentication](https://source.android.com/security/authentication?hl=zh-cn)
 
 ### Keystore(StrongBox)
 

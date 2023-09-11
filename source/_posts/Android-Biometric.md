@@ -32,7 +32,7 @@ Note that only storing and using keys in TEE or TRH does not completely solve th
 ### Gatekeeper
 [Gatekeeper](https://source.android.com/security/authentication/gatekeeper?hl=zh-cn) implements verification of user lock screen factors (PIN/password/pattern) in TEE and, upon successful authentication, communicates this to Keymaster for releasing access to authentication bound keys. **Weaver** implements the same functionality in TRH and communicates with Strongbox.
 
-More info:
+### More info
 
 - [在Android中使用生物识别](https://segmentfault.com/a/1190000040140033)
 

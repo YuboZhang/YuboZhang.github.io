@@ -239,8 +239,7 @@
 <p><strong><em>NOTE:</em></strong><br>Note that only storing and using keys in TEE or TRH does not completely solve the problem of making them unusable under the assumption of a kernel compromise: if an attacker gains access to the low-level interfaces for communicating directly with Keymaster or Strongbox, they can use it as an oracle for cryptographic operations that require the private key. This is the reason why keys can be authentication bound and&#x2F;or require user presence verification, e.g. by pushing a hardware button that is detectable by the TRH to assure that keys are not used in the background without user consent.</p>
 </blockquote>
 <h3 id="Gatekeeper"><a href="#Gatekeeper" class="headerlink" title="Gatekeeper"></a>Gatekeeper</h3><p><a target="_blank" rel="noopener" href="https://source.android.com/security/authentication/gatekeeper?hl=zh-cn">Gatekeeper</a> implements verification of user lock screen factors (PIN&#x2F;password&#x2F;pattern) in TEE and, upon successful authentication, communicates this to Keymaster for releasing access to authentication bound keys. <strong>Weaver</strong> implements the same functionality in TRH and communicates with Strongbox.</p>
-<p>More info:</p>
-<ul>
+<h3 id="More-info"><a href="#More-info" class="headerlink" title="More info"></a>More info</h3><ul>
 <li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040140033">在Android中使用生物识别</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040175152">实战 | 将 Android 生物识别身份验证整合至应用中</a></p>

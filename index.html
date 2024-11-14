@@ -177,6 +177,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://yubozhang.github.io/Tool/github-proxy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhang Yubo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Personal Page">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Tool/github-proxy/" class="post-title-link" itemprop="url">How to config github proxy with http/https/ssh</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-11-14 13:37:06" itemprop="dateCreated datePublished" datetime="2024-11-14T13:37:06+08:00">2024-11-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="config-proxy-for-http-x2F-https"><a href="#config-proxy-for-http-x2F-https" class="headerlink" title="config proxy for http&#x2F;https"></a>config proxy for http&#x2F;https</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<p>or edit the file ~&#x2F;.gitconfig and add the following item</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">      proxy = socks5://127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">      proxy = socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="config-proxy-for-ssh"><a href="#config-proxy-for-ssh" class="headerlink" title="config proxy for ssh"></a>config proxy for ssh</h2><h3 id="install-proxychains"><a href="#install-proxychains" class="headerlink" title="install proxychains"></a>install proxychains</h3><p>use the tool <code>proxychains</code>, run the following command to install in arch Linux based distributions (i.e. Manajaro).</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S proxychains-ng</span><br></pre></td></tr></table></figure>
+
+<h3 id="config-proxychains"><a href="#config-proxychains" class="headerlink" title="config proxychains"></a>config proxychains</h3><p>edit the file <code>/etc/proxychains.conf</code>, add a line in the <code>ProxyList</code> item</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ProxyList]</span><br><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
+
+<h3 id="set-up-alias"><a href="#set-up-alias" class="headerlink" title="set up alias"></a>set up alias</h3><p>Open the file <code>~/.zshrc</code> (in manjaro) and add the following line:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias git=&quot;proxychains -q git&quot;</span><br></pre></td></tr></table></figure>
+<p>Now you can use git commands by ssh if a public ssh-key has been shared to your account on <code>Github.com</code>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://yubozhang.github.io/Android/Android-Biometric/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -763,20 +843,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

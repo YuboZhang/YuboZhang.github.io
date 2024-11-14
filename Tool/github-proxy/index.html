@@ -20,22 +20,22 @@
     var CONFIG = {"hostname":"yubozhang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="IntroductionTo run Rust programs in Cortex M core. Guide could be found here. Git repos cortex-m-quickstart  Dependencies12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack of">
+  <meta name="description" content="config proxy for http&#x2F;https12git config --global http.proxy socks5:&#x2F;&#x2F;127.0.0.1:1080git config --global https.proxy socks5:&#x2F;&#x2F;127.0.0.1:1080  or edit the file ~&#x2F;.gitconfig and add the followin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Rust-embedded Cortex-M-Quickstart">
-<meta property="og:url" content="https://yubozhang.github.io/Rust/rust-embedded-cortex-m-quickstart/index.html">
+<meta property="og:title" content="How to config github proxy with http&#x2F;https&#x2F;ssh">
+<meta property="og:url" content="https://yubozhang.github.io/Tool/github-proxy/index.html">
 <meta property="og:site_name" content="Personal Page">
-<meta property="og:description" content="IntroductionTo run Rust programs in Cortex M core. Guide could be found here. Git repos cortex-m-quickstart  Dependencies12cargo install cargo-binutilsrustup component add llvm-tools-preview  #lack of">
+<meta property="og:description" content="config proxy for http&#x2F;https12git config --global http.proxy socks5:&#x2F;&#x2F;127.0.0.1:1080git config --global https.proxy socks5:&#x2F;&#x2F;127.0.0.1:1080  or edit the file ~&#x2F;.gitconfig and add the followin">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-03T11:35:45.000Z">
-<meta property="article:modified_time" content="2020-09-03T11:35:45.000Z">
+<meta property="article:published_time" content="2024-11-14T05:37:06.000Z">
+<meta property="article:modified_time" content="2024-11-14T05:37:06.000Z">
 <meta property="article:author" content="Zhang Yubo">
-<meta property="article:tag" content="Rust">
-<meta property="article:tag" content="Cortex M">
-<meta property="article:tag" content="Embedded">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="github">
+<meta property="article:tag" content="proxy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://yubozhang.github.io/Rust/rust-embedded-cortex-m-quickstart/">
+<link rel="canonical" href="https://yubozhang.github.io/Tool/github-proxy/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>Rust-embedded Cortex-M-Quickstart | Personal Page</title>
+  <title>How to config github proxy with http/https/ssh | Personal Page</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175630298-1"></script>
     <script>
@@ -185,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://yubozhang.github.io/Rust/rust-embedded-cortex-m-quickstart/">
+    <link itemprop="mainEntityOfPage" href="https://yubozhang.github.io/Tool/github-proxy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -198,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Rust-embedded Cortex-M-Quickstart
+          How to config github proxy with http/https/ssh
         </h1>
 
         <div class="post-meta">
@@ -208,7 +208,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-09-03 19:35:45" itemprop="dateCreated datePublished" datetime="2020-09-03T19:35:45+08:00">2020-09-03</time>
+              <time title="Created: 2024-11-14 13:37:06" itemprop="dateCreated datePublished" datetime="2024-11-14T13:37:06+08:00">2024-11-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,7 +216,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Rust/" itemprop="url" rel="index"><span itemprop="name">Rust</span></a>
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
                 </span>
             </span>
 
@@ -238,12 +238,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>To run Rust programs in Cortex M core. Guide could be found <a target="_blank" rel="noopener" href="https://rust-embedded.github.io/book/intro/index.html">here</a>.</p>
-<h2 id="Git-repos"><a href="#Git-repos" class="headerlink" title="Git repos"></a>Git repos</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/rust-embedded/cortex-m-quickstart.git">cortex-m-quickstart</a></li>
-</ul>
-<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cargo install cargo-binutils</span><br><span class="line">rustup component add llvm-tools-preview  <span class="comment">#lack of this tools will result in Failed to execute tool: readobj</span></span><br></pre></td></tr></table></figure>
-<p>Dependencies could be found <a target="_blank" rel="noopener" href="https://docs.rust-embedded.org/discovery/03-setup/index.html">here</a>.</p>
+        <h2 id="config-proxy-for-http-x2F-https"><a href="#config-proxy-for-http-x2F-https" class="headerlink" title="config proxy for http&#x2F;https"></a>config proxy for http&#x2F;https</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<p>or edit the file ~&#x2F;.gitconfig and add the following item</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">      proxy = socks5://127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">      proxy = socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="config-proxy-for-ssh"><a href="#config-proxy-for-ssh" class="headerlink" title="config proxy for ssh"></a>config proxy for ssh</h2><h3 id="install-proxychains"><a href="#install-proxychains" class="headerlink" title="install proxychains"></a>install proxychains</h3><p>use the tool <code>proxychains</code>, run the following command to install in arch Linux based distributions (i.e. Manajaro).</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S proxychains-ng</span><br></pre></td></tr></table></figure>
+
+<h3 id="config-proxychains"><a href="#config-proxychains" class="headerlink" title="config proxychains"></a>config proxychains</h3><p>edit the file <code>/etc/proxychains.conf</code>, add a line in the <code>ProxyList</code> item</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ProxyList]</span><br><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
+
+<h3 id="set-up-alias"><a href="#set-up-alias" class="headerlink" title="set up alias"></a>set up alias</h3><p>Open the file <code>~/.zshrc</code> (in manjaro) and add the following line:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias git=&quot;proxychains -q git&quot;</span><br></pre></td></tr></table></figure>
+<p>Now you can use git commands by ssh if a public ssh-key has been shared to your account on <code>Github.com</code>.</p>
 
     </div>
 
@@ -253,9 +261,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Rust/" rel="tag"># Rust</a>
-              <a href="/tags/Cortex-M/" rel="tag"># Cortex M</a>
-              <a href="/tags/Embedded/" rel="tag"># Embedded</a>
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/github/" rel="tag"># github</a>
+              <a href="/tags/proxy/" rel="tag"># proxy</a>
           </div>
 
         
@@ -264,13 +272,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/Rust/Bulletproofs-Rust/" rel="prev" title="Error on building Bulletproofs">
-      <i class="fa fa-chevron-left"></i> Error on building Bulletproofs
+    <a href="/Android/Android-Biometric/" rel="prev" title="Android Biometric">
+      <i class="fa fa-chevron-left"></i> Android Biometric
     </a></div>
-      <div class="post-nav-item">
-    <a href="/sbt/sbt-encoding-issue/" rel="next" title="sbt encoding issue - Chinese words are not printed as expected">
-      sbt encoding issue - Chinese words are not printed as expected <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -330,7 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-repos"><span class="nav-number">2.</span> <span class="nav-text">Git repos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dependencies"><span class="nav-number">3.</span> <span class="nav-text">Dependencies</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#config-proxy-for-http-x2F-https"><span class="nav-number">1.</span> <span class="nav-text">config proxy for http&#x2F;https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-proxy-for-ssh"><span class="nav-number">2.</span> <span class="nav-text">config proxy for ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-proxychains"><span class="nav-number">2.1.</span> <span class="nav-text">install proxychains</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#config-proxychains"><span class="nav-number">2.2.</span> <span class="nav-text">config proxychains</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-up-alias"><span class="nav-number">2.3.</span> <span class="nav-text">set up alias</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -477,7 +482,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'YuboZhang.github.io',
       owner       : 'YuboZhang',
       admin       : ['YuboZhang'],
-      id          : 'b439f3f0a017f62ea07f47a96df62828',
+      id          : 'ce03da2e6adba627d749791a9771346a',
         language: '',
       distractionFreeMode: true
     });

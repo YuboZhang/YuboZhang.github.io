@@ -7,3 +7,4 @@ public/
 .deploy*/
 .travis.yml.bak
 _config.yml.bak
+.vscode/

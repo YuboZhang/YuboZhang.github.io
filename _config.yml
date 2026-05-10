@@ -5,8 +5,13 @@
 # Site
 title: Personal Page
 subtitle: 'Stay Hungry, Stay Foolish'
-description: ''
+description: 'A personal blog focused on Rust, blockchain security, Android development, and embedded systems.'
 keywords:
+  - Rust
+  - Blockchain
+  - Android
+  - Embedded Systems
+  - Hexo
 author: Zhang Yubo
 language: en
 timezone: 'Asia/Shanghai'
@@ -70,7 +75,18 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  Android: android
+  Blockchain: blockchain
+  Rust: rust
+  Embedded: embedded
+  Tools: tools
 tag_map:
+  rust: rust
+  android: android
+  biometric: biometric
+  cryptography: cryptography
+  embedded: embedded
+  web: web
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -104,4 +120,8 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:YuboZhang/YuboZhang.github.io.git
+  branch: gh-pages
+  message: 'Site updated: {{ now("YYYY-MM-DD HH:mm:ss") }}'
+

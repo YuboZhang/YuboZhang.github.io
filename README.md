@@ -5,11 +5,11 @@
 
 ### How to install Hexo
 ```
-sudo npm install -g hexo-cli
+npm install -g hexo-cli
 ```
 
 ### How to update Hexo
 ```
-sudo npm update hexo
-sudo npm audit fix --force
+npm update hexo
+npm audit fix
 ```

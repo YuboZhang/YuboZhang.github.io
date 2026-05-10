@@ -1,5 +1,5 @@
 ---
-title: Android Biometric
+title: Android Biometric Authentication: Keymaster, StrongBox & Gatekeeper
 date: 2022-08-07 20:31:30
 updated: 2023-09-10 22:33:01
 categories:
@@ -41,3 +41,4 @@ Note that only storing and using keys in TEE or TRH does not completely solve th
 - [Example on Github](https://github.com/isaidamier/blogs.biometrics.cryptoBlog)
 
 - [The Android Platform Security Model](https://arxiv.org/pdf/1904.05572.pdf)
+
